@@ -3,7 +3,8 @@ Total_spend = input(" ซื้อสินค้าทั้งหมดกี�
 member = input(" เป็นสมาชิกหรือไม่ [ Y / N ] ? >>: ")
 print(" ")
 print("********************************************")
-if member == "Y":
+answer = member.lower() //high accurate
+if answer == "y":
     print(" ")
     if int(Total_spend) >= 10000:
         final_price = int(Total_spend) * 90 //100
@@ -13,7 +14,7 @@ if member == "Y":
         final_price = int(Total_spend) * 95 //100
         point = int(final_price) * 0.75
         print(f"คุณ{user} เป็นสมาชิก ซื้อสินค้า {Total_spend} จะได้รับส่วนลด 5% ลดเหลือ {final_price} ได้เเต้มสะสม {point} เเต้ม")
-if member == "N" :
+if answer == "n" :
     print(" ")
     final_price = int(Total_spend) * 95 //100
     point = int(final_price) // 2
